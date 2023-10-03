@@ -20,7 +20,7 @@ app.use("/", router);
 // Routing
 // Routing Get Homepage
 router.get("/", (req, res, next) => {
-  res.redirect("http://localhost:4000/index.html");
+  res.redirect("https://admirable-entremet-e945b0.netlify.app/index.html");
 });
 
 // Routing Get Data Feedback
@@ -57,7 +57,7 @@ router.post("/home", (req, res, next) => {
       message: req.body.message,
     })
     .then(function () {
-      res.redirect("http://localhost:4000/");
+      res.redirect("https://admirable-entremet-e945b0.netlify.app/");
     })
     .catch(function (err) {
       console.log(err);
@@ -69,12 +69,12 @@ router.post("/home", (req, res, next) => {
 
 // Routing Get Checkup Page
 router.get("/checkup", function (req, res, next) {
-  res.redirect("http://localhost:4000/CheckUp.html");
+  res.redirect("https://admirable-entremet-e945b0.netlify.app/CheckUp.html");
 });
 
 // Routing Get About Us Page
 router.get("/aboutus", function (req, res, next) {
-  res.redirect("http://localhost:4000/AboutUs.html");
+  res.redirect("https://admirable-entremet-e945b0.netlify.app/AboutUs.html");
 });
 
 // Running Server

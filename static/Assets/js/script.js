@@ -132,7 +132,7 @@ var message = document.getElementById("message");
 btn.addEventListener("click", sendData);
 
 function sendData() {
-  fetch("http://localhost:4000/home", {
+  fetch("https://admirable-entremet-e945b0.netlify.app/home", {
     method: "POST",
     body: JSON.stringify({
       rating: rating.value,
@@ -144,7 +144,7 @@ function sendData() {
   })
     .then(function (response) {
       if (response.ok) {
-        return response.redirect("http://localhost:4000/");
+        return response.redirect("https://admirable-entremet-e945b0.netlify.app/");
       }
       return Promise.reject(response);
     })
@@ -153,7 +153,7 @@ function sendData() {
     });
 }
 
-$.getJSON("http://localhost:4000/testimoni", function (data) {
+$.getJSON("https://admirable-entremet-e945b0.netlify.app/testimoni", function (data) {
   let item = data.data;
   let currentIndex = 0;
 
